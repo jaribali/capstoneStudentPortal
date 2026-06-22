@@ -40,7 +40,7 @@ git clone <repository-url>
 cd capstoneStudentPortal
 ```
 
-### Step 2: Create a Virtual  (in this project, flaskSP)
+### Step 2: Create a Virtual Environment (in this project, flaskSP)
 
 #### Windows
 
