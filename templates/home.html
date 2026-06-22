@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{ pageTitle }}</title>
+{% endblock %}
+
+{% block home_active %}
+class="active"
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 index-left">
+        <div class="">
+            <h1>{{ pageTitle }}</h1>
+            <div>
+                <p>JSchool Student Portal registration, join us today while scholarship lasts!</p>
+            </div>
+            <a href="/student/portal"><button type="submit" class="btn btn-primary btn-block btn-lg">Get
+                    Started</button></a>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/heroimage.png')}}" alt="">
+    </div>
+</div>
+{% endblock %}

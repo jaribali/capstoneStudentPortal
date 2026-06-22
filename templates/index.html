@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{ pageTitle }}</title>
+{% endblock %}
+
+{% block home_active %}
+class="active"
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="dash-info"><b>Info!</b> All students records table - {{ pageTitle }}</div>
+
+    <!-- <div>{{ students }}</div> -->
+
+    <div class="table-box">
+        <div class="container">
+            <div class="search-layout">
+                <div class="col-md-3">
+                    <input id="name-search" type="text" class="form-control" placeholder="Search Record By Name Only">
+                </div>
+
+                <div class="col-md-3">
+                    <select id="status-search" class="form-control">
+                        <option selected>Select Admission Status</option>
+                        <option value="admitted">Admitted</option>
+                        <option value="pending">Pending</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <select id="gender-search" class="form-control">
+                        <option selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+
+                <div class="col-md-3">
+                    <input id="agg-search" type="number" class="form-control" placeholder="Enter WASSCE Aggregate">
+                </div>
+
+                <button id="search" class="btn btn-primary btn-block">Search</button>
+            </div>
+        </div>
+
+        <div>
+            <table class="table table-bordered table-hover text-center">
+                <thead>
+                    <tr>
+                        <th>S/n</th>
+                        <th>Name</th>
+                        <th>Gender</th>
+                        <th>Wassce Aggregate</th>
+                        <th>Admission Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{student['id']}}</td>
+                        <td>{{student['first_name'].capitalize()}} {{student['last_name'].capitalize()}}</td>
+                        <td>{{student['gender'].capitalize()}}</td>
+                        <td>{{student['wassce_aggregate']}}</td>
+                        <td>{{student['status'].capitalize()}}</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm btn-eye view-student" id="view-std-{{ student['id'] }}">
+                                <i class="fa-solid fa-eye" style="font-size: large;"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    {%else%}
+                    <tr colspan="3">
+                        <td></td>
+                        <td>No user found matching your search query</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

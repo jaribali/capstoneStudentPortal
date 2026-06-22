@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{ pageTitle }}</title>
+{% endblock %}
+
+{% block home_active %}
+class="active"
+{% endblock %}
+
+{% block content %}
+<div id="student-id" style="opacity: 0;">{{ student[0]['id'] }}</div>
+
+<div class="container profile-container">
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-default text-center">
+                <div class="panel-body">
+                    <img src="{{ url_for('static', filename='images/') }}{{ student[0]['photo_id'] }}.png"
+                        class="img-responsive img-circle center-block" alt="Profile Picture"
+                        style="margin-bottom: 15px;">
+                    <h4>{{ student[0]['first_name'] }} {{ student[0]['last_name'] }}</h4>
+                    <span class="label label-info">{{ student[0]['status'].upper() }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-heading">Personal Information</div>
+                <div class="panel-body">
+                    <p><strong>Email:</strong> {{ student[0]['email'] }}</p>
+                    <p><strong>Gender:</strong> {{ student[0]['gender'] }}</p>
+                    <p><strong>Phone Number:</strong> {{ student[0]['phone_number'] }}</p>
+                    <p><strong>Date Of Birth:</strong> {{ student[0]['dob'] }}</p>
+                    <p><strong>Address:</strong> {{ student[0]['address'] }}</p>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Other Information</div>
+                <div class="panel-body panel-center">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><strong>Region Of Origin:</strong> {{ student[0]['region_of_origin'] }}</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p><strong>District Of Origin:</strong> {{ student[0]['district_of_origin'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Academics Related Information</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <p><strong>Next Of Kin:</strong> {{ student[0]['next_of_kin'] }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p><strong>WASSCE Aggregate:</strong> {{ student[0]['wassce_aggregate'] }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p><strong>Status:</strong> {{ student[0]['status'].capitalize() }}</p>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="change-status"><strong>Change Status:</strong></label>
+                            <select id="change-status" class="form-control">
+                                <option>Change Status</option>
+                                <option>Admitted</option>
+                                <option>Pending</option>
+                                <option>Rejected</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,206 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 45px;
+}
+
+.btn {
+  background-color: #022753;
+  width: 200px;
+}
+
+nav.navbar {
+    background-color: #022753;
+}
+
+a.navbar-brand {
+    /* font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px; */
+    background-color: currentColor;
+}
+
+a.navbar-brand img {
+  height: 100%;
+  margin: 0px;
+  width: auto5;
+}
+
+.flash_success {
+  color: rgb(25, 153, 25);
+}
+
+.flash_error {
+  color: rgb(255, 0, 0);
+}
+
+/* Index */
+
+#index-list {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: 400px;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-bottom: 50px;
+}
+
+h1 {
+  margin-top: 45px;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+label {
+  font-family: serif;
+  font-size: 20px;
+}
+
+h1, label {
+  color:#1e0253
+}
+
+.index-left {
+  height: 385px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row h2 {
+  color: #1e0253;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+.dash-info {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgba(42, 131, 210, 0.464);
+  border-radius: 8px;
+}
+
+table th, td {
+  text-align: center;
+}
+
+.table-box {
+  margin: 10px;
+}
+
+.table-box .container {
+  width: 100%;
+  margin: 20px 0px;
+  padding: 0px;
+}
+
+.btn-eye {
+  width: 60px;
+}
+
+.main {
+  overflow-y: scroll;
+  height: 70vh;
+  padding-left: 60px;
+}
+
+.search-layout {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search-layout button {
+  margin-right: 10px;
+}
+
+/* Student Form */
+
+.flexbox {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(163, 200, 232);
+}
+
+.form-wrapper {
+  padding: 0 10px 20px 10px;
+}
+
+.form-wrapper .col-md-6:first-child {
+  padding-right: 5px;
+}
+
+.section-title {
+  background-color: #303a45;
+  color: white;
+  font-size: 24px;
+  padding: 8px;
+}
+
+div .col-md-6 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.mb-3 {
+  margin: 20px 0px;
+}
+
+/* Student Index */
+
+.profile-container {
+  padding: 0px;
+  margin: 20px 0px;
+  width: 100%;
+}
+
+.panel-center {
+  display: flex;
+  justify-content: center;
+}
+
+.panel-center .row {
+  width: 100%;
+}
+
+.col-md-3 .panel {
+  background-color: #c6865a;
+  color: white;
+}
+
+.panel-heading {
+  background-color: #dbe9f7;
+  color: #4b4b8f;
+  font-size: 24px;
+}
+
+.panel-body img {
+  width: 200px;
+  height: auto;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #022753;
+  text-align: center;
+}
+
+.footer p {
+    color: aliceblue;
+    margin-top: 10px;
+}
+
+footer.footer, nav.navbar {
+    font-family: monospace;
+}

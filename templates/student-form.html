@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>{{ pageTitle }}</title>
+{% endblock %}
+
+{% block home_active %}
+class="active"
+{% endblock %}
+
+{% block content %}
+<div class="row flexbox">
+    <h2 class="text-center">Student Portal Form</h2>
+    <div style="color: red;"><i>Please fill in all required information</i></div>
+
+    <div class="form-wrapper">
+        <div class="section-title">Personal Information</div>
+        <form action="javascript:0" id="student-detail-form">
+            <div class="mb-3">
+                <label for="passportPic" class="form-label">Upload Image</label>
+                <input class="form-control" type="file" id="passportPic" required>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter First Name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="middleName" class="form-label">Middle Name</label>
+                    <input type="text" class="form-control" id="middleName" placeholder="Enter Middle Name">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter Last Name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter Email Address" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" required>
+                </div>
+                <div class="col-md-6">
+                    <label style="display: block;">Gender</label>
+                    <div style="display: inline;">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                        <label class="form-check-label" for="male">Male</label>
+                    </div>
+                    <div style="display: inline;">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check-label" for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="phoneNumber" class="form-label">Phone Number</label>
+                    <input type="number" class="form-control" id="phoneNumber" placeholder="Enter Phone Number"
+                        required>
+                </div>
+                <div class="col-md-6">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea type="text" class="form-control" id="address" placeholder="Enter Address"
+                        required></textarea>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="regionOfOrigin" class="form-label">Select Region</label>
+                    <select class="form-control" id="regionOfOrigin" required>
+                        <option selected>Select Region</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label for="districtOfOrigin" class="form-label">Select District</label>
+                    <select class="form-control" id="districtOfOrigin" required>
+                        <option selected>Select District</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="nextOfKin" class="form-label">Next of Kin</label>
+                <input type="text" class="form-control" id="nextOfKin" placeholder="Enter Name of Next of Kin" required>
+            </div>
+
+            <div class="section-title">Academics Related Information</div>
+            <div class="mb-3">
+                <label for="wassceAggregate" class="form-label">WASSCE Aggregate</label>
+                <input type="number" class="form-control" id="wassceAggregate" placeholder="Enter WASSCE Aggregate"
+                    required>
+            </div>
+
+            <div style="display: flex; justify-content: center;">
+                <button type="submit" class="btn btn-primary btn-block btn-lg text-center">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
